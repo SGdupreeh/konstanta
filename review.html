@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Центр согласования проекта | ООО «Константа»</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="review.css">
+</head>
+<body>
+
+  <!-- Шапка Центра согласования -->
+  <header class="hub-header">
+    <div class="hub-header-inner">
+      <div class="hub-brand">
+        <div class="hub-logo">К</div>
+        <div class="hub-title-group">
+          <h1>
+            ООО «Константа» 
+            <span class="hub-badge-version">Спринт 1 · Предрелиз</span>
+          </h1>
+          <p>Интерактивный центр согласования ключевых решений и контента</p>
+        </div>
+      </div>
+
+      <div class="hub-progress-box">
+        <div class="hub-progress-header">
+          <span id="progress-label">Согласовано: 0 из 13</span>
+          <span id="progress-percent">0%</span>
+        </div>
+        <div class="hub-progress-track">
+          <div class="hub-progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="hub-actions">
+        <button class="hub-btn hub-btn-primary" id="btn-export" title="Сформировать готовый текст для отправки в мессенджер">
+          📋 Протокол для мессенджера
+        </button>
+        <button class="hub-btn" id="btn-print" title="Распечатать или сохранить в PDF">
+          🖨️ Печать / PDF
+        </button>
+        <button class="hub-btn" id="btn-reset" title="Очистить все ответы">
+          🔄 Сброс
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Панель фильтров по разделам сайта -->
+  <nav class="hub-filters-bar" aria-label="Фильтр по страницам">
+    <div class="hub-filters-inner">
+      <button class="hub-filter-pill active" data-filter="all">Все разделы (13)</button>
+      <button class="hub-filter-pill" data-filter="index.html">Главная (index.html)</button>
+      <button class="hub-filter-pill" data-filter="solutions.html">Продукция (solutions.html)</button>
+      <button class="hub-filter-pill" data-filter="projects.html">Объекты (projects.html)</button>
+      <button class="hub-filter-pill" data-filter="schools.html">Стандарты школ (schools.html)</button>
+      <button class="hub-filter-pill" data-filter="contacts.html">Контакты (contacts.html)</button>
+      <button class="hub-filter-pill" data-filter="privacy.html">152-ФЗ / Право (privacy.html)</button>
+    </div>
+  </nav>
+
+  <!-- Основная рабочая область -->
+  <main class="hub-main">
+
+    <!-- Левая колонка: Список контрольных точек -->
+    <aside class="hub-sidebar" aria-label="Список контрольных точек">
+      <div class="hub-sidebar-header">
+        <h2>Контрольные точки</h2>
+      </div>
+      <ul class="hub-sidebar-list" id="sidebar-list">
+        <!-- Генерируется из review.js -->
+      </ul>
+    </aside>
+
+    <!-- Правая область: Двухколоночный детальный блок -->
+    <section class="hub-detail" aria-label="Детали выбранной точки">
+
+      <!-- Карточка 1: Превью, Описание и Экспертиза -->
+      <article class="hub-card hub-preview-card">
+        <div class="hub-preview-img-wrap">
+          <img id="preview-img" class="hub-preview-img" src="assets/school-photos/new/photos/photo_1080@31-08-2026_16-43-11.jpg" alt="Превью блока">
+          <div class="hub-preview-badge-overlay">
+            <span class="hub-chip" id="badge-page">Главная страница</span>
+            <span class="hub-chip" id="badge-category">Конверсия</span>
+          </div>
+        </div>
+
+        <div class="hub-preview-content">
+          <h2 class="hub-section-heading" id="section-title">01. Первый экран (Hero-блок)</h2>
+          
+          <div class="hub-meta-row">
+            <span class="hub-expert-tag" id="expert-tag">Экспертиза: CRO & Tech Lead</span>
+            <a id="link-target-url" class="hub-link-ext" href="index.html" target="_blank" rel="noopener">Перейти к блоку на сайте ↗</a>
+          </div>
+
+          <p class="hub-preview-desc" id="section-desc">
+            Ударный первый экран с позиционированием подрядчика, четким оффером для генподрядчиков и директоров школ, плашкой мощности цеха (3 500 м²) и двумя целевыми кнопками.
+          </p>
+
+          <h3 class="hub-block-subhead">Почему сделано именно так (Обоснование экспертов):</h3>
+          <ul class="hub-rationales-list" id="rationales-list">
+            <!-- Список обоснований -->
+          </ul>
+
+          <h3 class="hub-block-subhead">Что проверяем в этом блоке:</h3>
+          <ul class="hub-checklist" id="checklist">
+            <!-- Чеклист -->
+          </ul>
+        </div>
+      </article>
+
+      <!-- Карточка 2: Вопрос клиенту, выбор решения и поле комментария -->
+      <article class="hub-card hub-decision-card">
+        
+        <div class="hub-question-box">
+          <h3>Вопрос для согласования с Заказчиком:</h3>
+          <p id="question-text">
+            Согласовать ключевые тезисы оффера: утверждаем ли формулировку «Капитальный ремонт. В деталях» и акцент на мощности цеха 3 500 м² в месяц?
+          </p>
+        </div>
+
+        <div class="hub-options-group">
+          <!-- Вариант 1: Оставляем -->
+          <button type="button" class="hub-option-btn opt-approved" id="opt-approved">
+            <div class="hub-option-icon">✓</div>
+            <div class="hub-option-text">
+              <h4>Оставляем как есть</h4>
+              <p>Текст, фото и формулировки полностью устраивают</p>
+            </div>
+          </button>
+
+          <!-- Вариант 2: Правки -->
+          <button type="button" class="hub-option-btn opt-changes" id="opt-changes">
+            <div class="hub-option-icon">✎</div>
+            <div class="hub-option-text">
+              <h4>Требуются правки</h4>
+              <p>Нужно скорректировать цифры, текст или заменить фото</p>
+            </div>
+          </button>
+
+          <!-- Вариант 3: Вопрос -->
+          <button type="button" class="hub-option-btn opt-question" id="opt-question">
+            <div class="hub-option-icon">?</div>
+            <div class="hub-option-text">
+              <h4>Нужна консультация</h4>
+              <p>Обсудить на рабочем созвоне с техническим лидером</p>
+            </div>
+          </button>
+        </div>
+
+        <div class="hub-comment-box">
+          <label for="comment-input">Ваши комментарии и замечания (автосохранение):</label>
+          <textarea id="comment-input" class="hub-textarea" placeholder="Укажите, что именно скорректировать (например: «заменить телефон на +7...», «добавить фото школы на Анохина», «уточнить формулировку гарантии»)..."></textarea>
+        </div>
+
+        <!-- Навигация вперед / назад -->
+        <div class="hub-nav-controls">
+          <button class="hub-btn" id="btn-prev">← Назад</button>
+          <span id="nav-counter" style="font-size: 13px; font-weight: 600; color: var(--hub-text-muted);">1 из 13</span>
+          <button class="hub-btn hub-btn-primary" id="btn-next">Вперед →</button>
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- Модальное окно протокола для копирования -->
+  <div class="hub-modal" id="hub-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="hub-modal-card">
+      <div class="hub-modal-header">
+        <h3 id="modal-title">📋 Протокол согласования проекта</h3>
+        <button class="hub-modal-close" id="modal-close" aria-label="Закрыть">✕</button>
+      </div>
+      <div class="hub-modal-body">
+        <p style="margin-bottom: 12px; color: var(--hub-text-muted);">
+          Этот текст готов к отправке руководству или в рабочий чат (Telegram / WhatsApp / Email):
+        </p>
+        <pre id="modal-protocol-text"></pre>
+      </div>
+      <div class="hub-modal-footer">
+        <button class="hub-btn hub-btn-success" id="btn-copy-protocol">
+          Скопировать в буфер обмена
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Всплывающее уведомление (Toast) -->
+  <div class="hub-toast" id="hub-toast" role="status" aria-live="polite">
+    Статус сохранен
+  </div>
+
+  <!-- Подключение скриптов данных и логики -->
+  <script src="review-data.js"></script>
+  <script src="review.js"></script>
+</body>
+</html>
