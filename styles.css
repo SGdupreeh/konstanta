@@ -511,9 +511,11 @@ main, .site-footer {
 .mos-hero {
   min-height: 540px;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   background: var(--blue);
   color: var(--white);
+  overflow: hidden;
+  position: relative;
 }
 
 .hero-copy {
@@ -522,6 +524,7 @@ main, .site-footer {
   justify-content: center;
   align-items: flex-start;
   padding: clamp(40px, 5vw, 70px) clamp(24px, 5vw, 70px);
+  min-width: 0;
 }
 
 .hero-sign {
@@ -601,17 +604,24 @@ main, .site-footer {
 }
 
 .hero-photo {
-  min-height: 540px;
-  aspect-ratio: 16 / 11;
   position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  min-width: 0;
   overflow: hidden;
   background: #cde8ed;
 }
 
 .hero-photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .photo-note {
@@ -2847,10 +2857,13 @@ main, .site-footer {
 
   .mos-hero {
     grid-template-columns: 1fr;
+    min-height: auto;
   }
 
   .hero-photo {
     min-height: 320px;
+    height: 340px;
+    width: 100%;
   }
 
   .metrics-bar {
