@@ -1,57 +1,118 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const mobileMenu = document.querySelector('.mobile-menu');
+/**
+ * script.js
+ * Общие обработчики интерфейса сайта ООО «Константа»
+ */
 
-menuToggle?.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(isOpen));
-  menuToggle.classList.toggle('is-open', isOpen);
-});
+let isCommonInitialized = false;
+function initCommon() {
+  if (isCommonInitialized) return;
+  isCommonInitialized = true;
 
-mobileMenu?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    menuToggle?.setAttribute('aria-expanded', 'false');
-    menuToggle?.classList.remove('is-open');
+  // Обработка форм заявок
+  document.querySelectorAll('form').forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const success = form.querySelector('.form-success') || document.createElement('p');
+      success.className = 'form-success is-active';
+      success.textContent = 'Спасибо! Ваша заявка принята. Инженер свяжется с вами в течение 24 часов для уточнения деталей и расчёта сметы.';
+      if (!form.querySelector('.form-success')) {
+        form.appendChild(success);
+      }
+      form.reset();
+    });
   });
-});
 
-document.querySelectorAll('.process-step').forEach((step) => {
-  step.addEventListener('click', () => {
-    const list = step.parentElement;
-    list?.querySelectorAll('.process-step').forEach((item) => item.classList.remove('active'));
-    step.classList.add('active');
+  // Шаги процессов (аккордеоны)
+  document.querySelectorAll('.process-step').forEach((step) => {
+    step.addEventListener('click', () => {
+      const list = step.parentElement;
+      list?.querySelectorAll('.process-step').forEach((item) => item.classList.remove('active'));
+      step.classList.add('active');
+    });
   });
-});
 
-document.querySelectorAll('.ba-tab').forEach((tab) => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.ba-tab').forEach((item) => item.classList.remove('active'));
-    document.querySelectorAll('.ba-stage').forEach((panel) => panel.classList.add('is-hidden'));
-    tab.classList.add('active');
-    document.querySelector(`[data-panel="${tab.dataset.tab}"]`)?.classList.remove('is-hidden');
-  });
-});
+  // Дропзона файлов на главной (index.html#fast-cta)
+  const homeDropzone = document.getElementById('home-file-dropzone');
+  const homeFileInput = document.getElementById('home-file-input');
+  const homeFileList = document.getElementById('home-file-list');
+  if (homeDropzone && homeFileInput) {
+    const attached = [];
+    const render = () => {
+      if (!homeFileList) return;
+      homeFileList.innerHTML = attached.map((f, i) => `
+        <div class="attached-file-chip">
+          <span>📄 ${f.name} (${(f.size / (1024 * 1024)).toFixed(2)} МБ)</span>
+          <button type="button" class="remove-file-btn" data-index="${i}" aria-label="Удалить файл ${f.name}">✕</button>
+        </div>
+      `).join('');
+      homeFileList.querySelectorAll('.remove-file-btn').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const idx = parseInt(btn.dataset.index, 10);
+          attached.splice(idx, 1);
+          render();
+        });
+      });
+    };
 
-const form = document.querySelector('#project-form');
-form?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const success = form.querySelector('.form-success');
-  success.textContent = 'Спасибо! В презентационной версии заявка никуда не отправляется — здесь будет подключена почта или CRM.';
-  form.reset();
-});
-
-const revealElements = document.querySelectorAll('.white-section > *, .gray-section > *, .solution-item, .result-card, .doc-box, .ba-stage');
-if ('IntersectionObserver' in window) {
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
+    homeDropzone.addEventListener('click', () => homeFileInput.click());
+    homeDropzone.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        homeFileInput.click();
       }
     });
-  }, { threshold: 0.12 });
-  revealElements.forEach((element) => {
-    element.classList.add('reveal');
-    revealObserver.observe(element);
-  });
+
+    homeFileInput.addEventListener('change', (e) => {
+      if (e.target.files) {
+        for (let i = 0; i < e.target.files.length; i++) attached.push(e.target.files[i]);
+        render();
+      }
+    });
+
+    ['dragenter', 'dragover'].forEach((name) => {
+      homeDropzone.addEventListener(name, (e) => {
+        e.preventDefault();
+        homeDropzone.classList.add('is-dragover');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach((name) => {
+      homeDropzone.addEventListener(name, (e) => {
+        e.preventDefault();
+        homeDropzone.classList.remove('is-dragover');
+      });
+    });
+
+    homeDropzone.addEventListener('drop', (e) => {
+      if (e.dataTransfer?.files) {
+        for (let i = 0; i < e.dataTransfer.files.length; i++) attached.push(e.dataTransfer.files[i]);
+        render();
+      }
+    });
+  }
+
+  // Reveal Observer для анимации появления секций
+  const revealElements = document.querySelectorAll('.white-section > *, .gray-section > *, .page-section > *, .showcase-section, .metrics-bar');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach((element) => {
+      element.classList.add('reveal');
+      revealObserver.observe(element);
+    });
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCommon);
+} else {
+  initCommon();
 }

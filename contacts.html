@@ -1,11 +1,196 @@
 <!doctype html>
 <html lang="ru">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Связаться с ООО «Константа» по проекту для школы или общественного объекта." /><title>Контакты — Константа</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet" /><link rel="stylesheet" href="styles.css" /></head>
-  <body data-page="contacts"><a class="skip-link" href="#content">Перейти к содержимому</a><div data-site-header></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Прямые контакты руководства проектов капитального ремонта ООО «Константа» и форма передачи ведомостей проёмов (ВОР/ПСД)." />
+    <title>Контакты — ООО «Константа»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="contacts-page" data-page="contacts">
+    <a class="skip-link" href="#content">Перейти к содержимому</a>
+    <div data-site-header></div>
+
     <main id="content">
-      <section class="contact-page-hero"><div><span class="eyebrow">На связи</span><h1>Есть объект?<br /><span>Давайте обсудим.</span></h1><p>Пришлите задачу — подготовим первичную оценку и подскажем, какие материалы нужны для расчёта.</p><a class="contact-phone" href="tel:+79150156605">+7 915 015-66-05</a></div><div class="contact-note"><span>Для первого разговора достаточно</span><strong>названия объекта,<br />города и задачи</strong></div></section>
-      <section class="page-section contact-form-section"><div class="section-heading"><span class="eyebrow">Обсудить проект</span><h2>Передайте<br /><span>исходные данные</span></h2></div><form id="project-form" class="project-form-light"><label>Ваше имя<input name="name" placeholder="Как к вам обращаться" required /></label><label>Телефон или email<input name="contact" placeholder="Для обратной связи" required /></label><label>Коротко о проекте<textarea name="project" rows="5" placeholder="Школа, окна, двери, сроки…"></textarea></label><button class="blue-button" type="submit">Обсудить проект <span>↗</span></button><small>Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</small><p class="form-success" role="status" aria-live="polite"></p></form></section>
-      <section class="page-section gray-panel contact-details"><div class="section-heading"><span class="eyebrow">Контактные данные</span><h2>Москва<br /><span>и Московская область</span></h2></div><div class="details-placeholder"><div><span>Телефон</span><strong>+7 915 015-66-05</strong></div><div><span>Почта</span><strong>Добавим рабочий email</strong></div><div><span>Адрес</span><strong>Добавим после подтверждения</strong></div></div></section>
-    </main><div data-site-footer></div><script src="site-data.js"></script><script src="site-shell.js"></script><script src="site-pages.js"></script><script src="script.js"></script>
+      <!-- СЕКЦИЯ 1: HERO ПРЯМЫЕ КОНТАКТЫ БЕЗ ПОСРЕДНИКОВ -->
+      <section class="contact-page-hero">
+        <div class="hero-left">
+          <span class="eyebrow">ПРЯМАЯ СВЯЗЬ С РУКОВОДСТВОМ ПРОЕКТОВ</span>
+          <h1>На связи.<br /><span>По делу. Без барьеров.</span></h1>
+          <p>
+            Прямой контакт с руководителем проектов капремонта школ. Принимаем в работу проектно-сметную документацию, ведомости объёмов (ВОР) и спецификации проёмов.
+          </p>
+          <div class="contact-hero-channels">
+            <a class="contact-main-phone" href="tel:+79150156605">+7 915 015-66-05</a>
+            <a class="contact-main-email" href="mailto:info@konstanta-msk.ru">info@konstanta-msk.ru</a>
+            <div class="messengers-row">
+              <a class="msg-btn whatsapp" href="https://wa.me/79150156605" target="_blank" rel="noopener">
+                Написать в WhatsApp
+              </a>
+              <a class="msg-btn telegram" href="https://t.me/+79150156605" target="_blank" rel="noopener">
+                Написать в Telegram
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-hero-card">
+          <div class="contact-note">
+            <span>Время ответа инженера ПТО:</span>
+            <strong>до 15 минут в рабочее время</strong>
+            <p>Расчёт сметы по готовой ведомости проёмов — от 4 до 24 часов с фиксацией цен.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- СЕКЦИЯ 2: ФОРМА ПЕРЕДАЧИ ВЕДОМОСТИ ПРОЁМОВ (ВОР/ПСД) -->
+      <section class="page-section contact-form-section white-section">
+        <div class="section-heading">
+          <span class="eyebrow">ОТДЕЛ ОЦЕНКИ И СМЕТ</span>
+          <h2>Передайте ведомость<br /><span>на оперативный расчёт</span></h2>
+          <p class="section-subtitle">
+            Прикрепите спецификацию проёмов (Excel, PDF, DWG) — инженер ПТО подготовит коммерческое предложение с точной стоимостью изделий и монтажа.
+          </p>
+        </div>
+
+        <form id="contact-upload-form" class="project-form-light contact-grid-form">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="contact-name">Контактное лицо или организация *</label>
+              <input id="contact-name" name="name" type="text" placeholder="Иван Иванов / ООО СпецСтрой" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Телефон для связи *</label>
+              <input id="contact-phone" name="phone" type="text" placeholder="+7 (___) ___-__-__" required />
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="contact-email">Email для сметы и КП *</label>
+              <input id="contact-email" name="email" type="email" placeholder="pto@company.ru" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-object">Объект / Номер школы (если выбран)</label>
+              <input id="contact-object" name="object" type="text" placeholder="Например: Школа на Батайском проезде" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-comment">Комментарий к заявке и ориентировочные сроки сдачи</label>
+            <textarea id="contact-comment" name="comment" rows="3" placeholder="Укажите предел огнестойкости (EI-30 / EI-60), необходимость детских замков, адрес доставки..."></textarea>
+          </div>
+
+          <!-- Drag and Drop Dropzone -->
+          <div class="form-group">
+            <label>Прикрепить файлы (ВОР, спецификации, чертежи)</label>
+            <div id="file-dropzone" class="file-dropzone">
+              <div class="dropzone-icon" aria-hidden="true">
+                <svg class="dropzone-svg" width="42" height="42" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 6C10 4.89543 10.8954 4 12 4H26L34 12V38C34 39.1046 33.1046 40 32 40H12C10.8954 40 10 39.1046 10 38V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M26 4V12H34" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <line x1="16" y1="16" x2="22" y2="16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+                  <line x1="16" y1="21" x2="24" y2="21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+                  <circle cx="28" cy="29" r="10" fill="currentColor"/>
+                  <path d="M28 34V24M28 24L24.5 27.5M28 24L31.5 27.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="dropzone-text">
+                <strong>Перетащите файлы сюда</strong> или нажмите для выбора
+              </p>
+              <span class="dropzone-hint">Поддерживаются форматы PDF, XLSX, XLS, DWG, ZIP до 50 МБ</span>
+              <input type="file" id="file-input" name="files" multiple style="display: none;" accept=".pdf,.xlsx,.xls,.dwg,.doc,.docx,.zip,.rar" />
+            </div>
+            <div id="file-list-display"></div>
+            <small class="dropzone-legal-note">Отправляя проектные файлы, отправитель гарантирует законность передачи содержащихся в них сведений и ПД третьих лиц для расчета сметы (ст. 6 152-ФЗ).</small>
+          </div>
+
+          <!-- БЛОК 152-ФЗ: ОБЯЗАТЕЛЬНЫЙ НЕПРЕДВЫБРАННЫЙ ЧЕКБОКС -->
+          <div class="form-consent-group">
+            <input type="checkbox" id="contact-consent" name="consent" class="consent-checkbox" required />
+            <label for="contact-consent" class="consent-label">
+              Я даю согласие ООО «Константа» на обработку персональных данных в целях расчета сметы и подготовки коммерческого предложения в соответствии с <a href="privacy.html" target="_blank" rel="noopener noreferrer">Политикой конфиденциальности</a> и <a href="documents.html" target="_blank" rel="noopener noreferrer">Согласием на обработку ПД</a>. *
+            </label>
+          </div>
+
+          <button class="blue-button submit-btn" type="submit">
+            Отправить ведомость на расчёт <span>↗</span>
+          </button>
+          <p class="form-success" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <!-- СЕКЦИЯ 3: ЛОГИСТИЧЕСКАЯ ЗОНА И АДРЕСА -->
+      <section class="page-section gray-panel logistics-section">
+        <div class="section-heading">
+          <span class="eyebrow">ЗОНА ОБСЛУЖИВАНИЯ И АДРЕСА</span>
+          <h2>Москва и вся область.<br /><span>Ночная логистика.</span></h2>
+        </div>
+
+        <div class="logistics-grid">
+          <div class="logistics-info-card">
+            <h3>Регламент поставок</h3>
+            <ul class="logistics-features">
+              <li>
+                <strong>Все округа Москвы (ЦАО, САО, СВАО, ВАО, ЮВАО, ЮАО, ЮЗАО, ЗАО, СЗАО, ЗелАО, ТиНАО)</strong>
+                <p>Беспрепятственный проезд транспорта по спецпропускам в дневное и ночное время.</p>
+              </li>
+              <li>
+                <strong>Ночная доставка и согласованная разгрузка</strong>
+                <p>Доставляем конструкции с 22:00 до 06:00, чтобы не блокировать прилегающую школьную территорию и учебный процесс.</p>
+              </li>
+              <li>
+                <strong>Собственные такелажные бригады</strong>
+                <p>Разгрузка манипуляторами и подъём оконных/дверных блоков на проектные этажи силами наших специалистов.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="addresses-card requisites-card">
+            <h3>Реквизиты и адреса</h3>
+            <div class="address-item">
+              <span class="addr-label">Юридическое лицо</span>
+              <strong>ООО «Константа»</strong>
+              <small>Общество с ограниченной ответственностью «Константа»</small>
+            </div>
+            <div class="address-item">
+              <span class="addr-label">Идентификационные коды</span>
+              <strong>ИНН: 7725838491 · КПП: 772501001</strong>
+              <small>ОГРН: 1147746927510 (зарегистрировано в г. Москве)</small>
+            </div>
+            <div class="address-item">
+              <span class="addr-label">Офис управления проектами</span>
+              <strong>115280, г. Москва, ул. Ленинская Слобода, д. 19, офис 302</strong>
+              <small>БЦ «Омега Плаза», ст. метро «Автозаводская»</small>
+            </div>
+            <div class="address-item">
+              <span class="addr-label">Производственный комплекс</span>
+              <strong>г. Москва, Проектируемый проезд № 4062, д. 6, стр. 16</strong>
+              <small>Цех раскроя, сборки и камера порошковой полимеризации</small>
+            </div>
+            <div class="address-item">
+              <span class="addr-label">Официальный Email и режим работы</span>
+              <strong><a href="mailto:info@konstanta-msk.ru">info@konstanta-msk.ru</a></strong>
+              <small>Пн – Сб: с 08:00 до 20:00 · Приём ведомостей через сайт 24/7</small>
+            </div>
+            <div class="address-item address-actions">
+              <a class="arrow-link" href="documents.html">
+                Реквизиты и выписка СРО <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+
+    <script src="site-data.js"></script>
+    <script src="site-shell.js"></script>
+    <script src="site-pages.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,12 +1,84 @@
 <!doctype html>
 <html lang="ru">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Проекты ООО «Константа» на объектах образования и инфраструктуры." /><title>Проекты — Константа</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet" /><link rel="stylesheet" href="styles.css" /></head>
-  <body data-page="projects"><a class="skip-link" href="#content">Перейти к содержимому</a><div data-site-header></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Реестр выполненных объектов капитального ремонта школ ООО «Константа»: двери EI-60, окна ГОСТ, входные группы и элементы МГН." />
+    <title>Реализованные объекты — ООО «Константа»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="projects-page" data-page="projects">
+    <a class="skip-link" href="#content">Перейти к содержимому</a>
+    <div data-site-header></div>
+
     <main id="content">
-      <section class="page-hero page-hero-light"><div><span class="eyebrow">Проекты</span><h1>Не обещаем.<br /><span>Показываем.</span></h1><p>Портфолио будет пополняться по мере подтверждения объектов. Адреса, годы и состав работ добавим из фактических данных компании.</p></div><div class="hero-index">01—09<br /><small>школ в портфолио<br />по предварительным данным</small></div></section>
-      <section class="page-section gray-panel"><div class="section-heading"><span class="eyebrow">Избранные объекты</span><h2>Работы<br /><span>в деталях</span></h2></div><div class="project-grid project-grid-large" data-project-grid></div></section>
-      <section class="white-section school-objects-section" id="school-objects"><div class="content-grid section-title"><h2>Объекты,<br /><span>которые участвуют в работе</span></h2><p>Школы Москвы и области. В карточках — фотографии входов, окон, дверей, витражей и общих групп.</p></div><div class="school-objects-grid" data-school-objects></div></section>
-      <section class="cta-band"><div><span class="eyebrow">Нужен похожий опыт?</span><h2>Запросите<br />презентацию</h2></div><a class="blue-button" href="contacts.html">Обсудить проект <span>↗</span></a></section>
-    </main><div data-site-footer></div><script src="site-data.js"></script><script src="site-shell.js"></script><script src="site-pages.js"></script><script src="script.js"></script>
+      <!-- СЕКЦИЯ 1: HERO РЕЕСТРА -->
+      <section class="page-hero page-hero-light">
+        <div class="hero-left">
+          <span class="eyebrow">ПОДТВЕРЖДЁННЫЙ ОПЫТ</span>
+          <h1>Реализованные<br /><span>объекты.</span></h1>
+          <p>
+            9 объектов капитального ремонта в Москве и Московской области с детализацией по фактически выполненным конструкциям и приёмкой технадзором.
+          </p>
+        </div>
+        <div class="hero-index">
+          01—09<br />
+          <small>сданных школ к 1 сентября<br />по согласованным актам</small>
+        </div>
+      </section>
+
+      <!-- СЕКЦИЯ 2: ФИЛЬТРЫ РАБОТ (FILTER BAR В 1 КЛИК) -->
+      <section class="filter-section">
+        <div class="filter-bar-wrapper">
+          <div class="filter-chips" data-projects-filters>
+            <!-- Генерируется из site-pages.js -->
+          </div>
+          <div class="filter-tip">
+            <svg class="filter-tip-svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 7V11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="8" cy="4.5" r="0.8" fill="currentColor"/>
+            </svg>
+            <span>Кликните на карточку или кнопку «Паспорт объекта» для быстрого просмотра («раз — следующий»)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- СЕКЦИЯ 3: КАТАЛОГ ОБЪЕКТОВ -->
+      <section class="page-section catalog-section gray-panel">
+        <div class="catalog-grid" data-projects-catalog>
+          <!-- Карточки 9 школ генерируются из site-pages.js -->
+        </div>
+      </section>
+
+      <!-- СЕКЦИЯ 4: ТЕНДЕРНЫЙ CTA -->
+      <section class="cta-band">
+        <div class="cta-copy">
+          <span class="eyebrow">ДЛЯ СЛУЖБ ЗАКАЗЧИКА И ГЕНПОДРЯДЧИКА</span>
+          <h2>Требуется подтверждение<br />объёмов для ПТО?</h2>
+          <p>
+            Предоставим акты приёмки формы КС-2, сертификаты соответствия ФЗ № 123 и исполнительную документацию по любому сданному объекту.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a class="blue-button" href="contacts.html?mode=ks2">Запросить акты КС-2 <span>↗</span></a>
+          <a class="outline-button light-outline" href="documents.html">Реестр сертификатов</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Полноэкранный модальный паспорт объекта -->
+    <div class="school-modal-wrapper" data-school-modal></div>
+
+    <div data-site-footer></div>
+
+    <script src="site-data.js"></script>
+    <script src="site-shell.js"></script>
+    <script src="site-pages.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 76" width="460" height="76" fill="none" role="img" aria-label="ООО «Константа» — Капитальный ремонт школ">
+  <title>ООО «Константа» — Капитальный ремонт школ</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@600;700;800&amp;display=swap');
+      .lockup-title {
+        font-family: 'Golos Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        fill: #171717;
+      }
+      .lockup-sub {
+        font-family: 'Golos Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        fill: #177dbb;
+      }
+      .mark-graphite { fill: #1e293b; }
+      .mark-blue { fill: #177dbb; }
+      .lockup-divider { stroke: #cbd5e1; stroke-width: 1.5; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <!-- Знак (Архитектурный строительный портал «Константа») -->
+  <g transform="translate(4, 6) scale(0.2735)">
+    <!-- Верхний правый элемент (Архитектурный графит) -->
+    <polygon class="mark-graphite" points="67,13 198,38 198,154 148,154 148,70 67,61" />
+    <!-- Нижний левый элемент (Московский синий) -->
+    <polygon class="mark-blue" points="0,0 0,234 198,219 198,174 47,177 47,9" />
+  </g>
+
+  <!-- Архитектурная разделительная ось -->
+  <line x1="72" y1="14" x2="72" y2="62" class="lockup-divider" />
+
+  <!-- Шрифтовая гарнитура (Golos Text) -->
+  <text x="86" y="38" class="lockup-title">КОНСТАНТА</text>
+  <text x="86" y="56" class="lockup-sub">КАПИТАЛЬНЫЙ РЕМОНТ ШКОЛ</text>
+</svg>

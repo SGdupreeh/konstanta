@@ -1,8 +1,22 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="1000" height="1000">
-	<style>
-		.s0 { fill: #d0d0d0 } 
-		.s1 { fill: #5f99cb } 
-	</style>
-	<path id="Фигура 2" class="s0" d="m512.38 437.14l-5 0.11-2.58-115.92 5-0.11zm-2.18-4.3v5l-49.94-0.01v-5zm-46.77 1.36l-5 0.11-1.63-78.45 5-0.1zm-3.86-80.88l-0.56 4.97-81.16-9.15 0.56-4.97zm-78.65-6.61l-5-0.11 1.06-48.31 5 0.11zm-1.91-45.9l0.96-4.91 129.18 25.3-0.96 4.91zm127.99 23.18v24h-127v-24zm1-2v116h-50v-116zm-41 23v7h-58v-7zm-6.9 5.87l11.71-2.62 1.09 4.88-11.71 2.62zm4.9 1.13v1h-19v-1zm22.92-33.35l0.16 6-26.99 0.71-0.16-6zm-24.92-5.64v16h-22v-16zm-28-4v30h-34v-30zm-42-8v25h-13v-25zm11 2v29h-16v-29zm18 2v20h-18v-20zm23 5v17h-13v-17zm29 6v10h-14v-10z"/>
-	<path id="Фигура 1" class="s1" d="m312.14 283.72l5-0.02 0.84 233.69-5 0.02zm3.64 234.42l-0.4-4.99 195.12-15.58 0.4 4.98zm191.77-61.22l4.99 0.18-1.7 45.67-5-0.18zm2.17-1.65l0.16 5-150.64 4.77-0.15-4.99zm-148.06 7.34l-5-0.01 0.09-170.04h5zm-48.95-175.57l1.03-4.89 47.67 10.13-1.04 4.89zm17.29-0.04v228h-15v-228zm29 8v218h-32v-218zm151 163v22h-36v-22zm-2 5v37h-153v-37zm-20 30v10h-149v-10zm-4-35v15h-57v-15zm-44 43v5h-96v-5zm-37-13v22h-52v-22zm-65-200v10h-10v-10zm12 2v10h-18v-10z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 202 238" width="200" height="236" fill="none" role="img" aria-label="ООО «Константа»">
+  <title>ООО «Константа» — Фирменный знак</title>
+  <desc>Архитектурный строительный портал из сопряжённых несущих элементов</desc>
+  <style>
+    .brand-portal-graphite {
+      fill: #1e293b;
+      transition: fill 0.2s ease;
+    }
+    .brand-portal-blue {
+      fill: #177dbb;
+      transition: fill 0.2s ease;
+    }
+    @media (prefers-color-scheme: dark) {
+      .brand-portal-graphite.auto-theme { fill: #f8fafc; }
+      .brand-portal-blue.auto-theme { fill: #38bdf8; }
+    }
+  </style>
+  <!-- Верхний правый элемент: Архитектурный конструкционный графит -->
+  <polygon class="brand-portal-graphite" points="67,13 198,38 198,154 148,154 148,70 67,61" />
+  <!-- Нижний левый элемент: Фирменный московский синий -->
+  <polygon class="brand-portal-blue" points="0,0 0,234 198,219 198,174 47,177 47,9" />
 </svg>
