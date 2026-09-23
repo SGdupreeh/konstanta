@@ -191,6 +191,15 @@
     </div>
   </div>
 
+  <!-- Модальное окно просмотра скриншота в полный размер (Lightbox) -->
+  <div class="hub-lightbox" id="hub-lightbox" role="dialog" aria-modal="true" aria-label="Просмотр скриншота">
+    <button class="hub-lightbox-close" id="lightbox-close" aria-label="Закрыть">✕</button>
+    <div class="hub-lightbox-content">
+      <img id="lightbox-img" src="" alt="Скриншот в полном разрешении">
+      <div class="hub-lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
   <!-- Всплывающее уведомление (Toast) -->
   <div class="hub-toast" id="hub-toast" role="status" aria-live="polite">
     Статус сохранен

@@ -398,6 +398,31 @@
       });
     }
 
+    // Lightbox для просмотра скриншотов в полном разрешении
+    const previewImgWrap = document.querySelector('.hub-preview-img-wrap');
+    const lightbox = document.getElementById('hub-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    if (previewImgWrap && lightbox && lightboxImg) {
+      previewImgWrap.addEventListener('click', () => {
+        if (!filteredSections[currentIndex]) return;
+        const sec = filteredSections[currentIndex];
+        lightboxImg.src = sec.image;
+        if (lightboxCaption) {
+          lightboxCaption.textContent = `${sec.title} (${sec.pageName}) — Кликните, чтобы закрыть`;
+        }
+        lightbox.classList.add('open');
+      });
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === lightboxClose || e.target === lightboxImg) {
+          lightbox.classList.remove('open');
+        }
+      });
+    }
+
     // Сброс ответов
     const btnReset = document.getElementById('btn-reset');
     if (btnReset) {

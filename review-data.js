@@ -17,7 +17,7 @@ window.REVIEW_DATA = {
       badge: "Первое впечатление / Конверсия",
       expert: "CRO & Tech Lead",
       expertRole: "Архитектор конверсии",
-      image: "assets/school-photos/new/photos/photo_1080@31-08-2026_16-43-11.jpg",
+      image: "assets/screenshots/01_index_hero.png",
       targetUrl: "index.html#hero",
       description: "Ударный первый экран с позиционированием подрядчика, четким оффером для генподрядчиков и директоров школ, плашкой мощности цеха (3 500 м²) и двумя целевыми кнопками.",
       rationales: [
@@ -40,7 +40,7 @@ window.REVIEW_DATA = {
       badge: "Доверие и квалификация",
       expert: "CRO Specialist",
       expertRole: "Специалист по B2B-доверию",
-      image: "assets/school-photos/new/photos/photo_1064@30-08-2026_02-07-26.jpg",
+      image: "assets/screenshots/02_index_metrics.png",
       targetUrl: "index.html#content",
       description: "Контрастная полоса ключевых измеримых показателей: 9+ сданных школ к 1 сентября, мощность цеха 3 500 м², предел огнестойкости EI-60, допуск СРО до 500 млн руб.",
       rationales: [
@@ -62,7 +62,7 @@ window.REVIEW_DATA = {
       badge: "Портфолио и фотофиксация",
       expert: "Senior Frontend Engineer",
       expertRole: "Инженер интерфейсов",
-      image: "assets/school-photos/new/photos/photo_765@30-08-2026_02-03-55.jpg",
+      image: "assets/screenshots/03_index_showcase.png",
       targetUrl: "index.html#showcase",
       description: "Интерактивный слайдер всех 9 сданных школьных корпусов с монолитной высотой карточек 560px, бейджами сдачи к 1 сентября, составом работ и быстрым переходом в подробный паспорт объекта.",
       rationales: [
@@ -84,7 +84,7 @@ window.REVIEW_DATA = {
       badge: "Номенклатура и стандарты",
       expert: "Technical Specialist",
       expertRole: "Инженер ПТО",
-      image: "assets/school-photos/new/photos/photo_909@30-08-2026_02-05-16.jpg",
+      image: "assets/screenshots/04_index_units.png",
       targetUrl: "index.html#units",
       description: "Три ключевых направления производства: 01 Дверные преграды EI-60, 02 Оконные и витражные блоки ГОСТ 23166, 03 Безопасная среда и МГН (СП 59.13330).",
       rationales: [
@@ -106,7 +106,7 @@ window.REVIEW_DATA = {
       badge: "Генерация лидов / B2B",
       expert: "CRM Integration Engineer",
       expertRole: "Инженер интеграций",
-      image: "assets/school-photos/new/photos/photo_1080@31-08-2026_16-43-11.jpg",
+      image: "assets/screenshots/05_index_form.png",
       targetUrl: "index.html#fast-cta",
       description: "Компактная форма быстрой передачи спецификации проемов: Имя, Телефон, Email, Объект и дропзона для загрузки файлов ВОР (PDF/Excel/DWG/ZIP) с защитой 152-ФЗ.",
       rationales: [
@@ -129,7 +129,7 @@ window.REVIEW_DATA = {
       badge: "Производство / ГОСТы",
       expert: "Senior Frontend Engineer",
       expertRole: "Ведущий разработчик",
-      image: "assets/school-photos/new/photos/photo_1064@30-08-2026_02-07-26.jpg",
+      image: "assets/screenshots/06_solutions_catalog.png",
       targetUrl: "solutions.html#doors",
       description: "Развернутый каталог технических решений: 01 Дверные системы EI-60, 02 Оконные блоки ГОСТ 23166-2021, 03 Входные тамбуры и МГН. Карточки спецификаций выровнены, фотографии растянуты на 100% высоты контента.",
       rationales: [
@@ -151,7 +151,7 @@ window.REVIEW_DATA = {
       badge: "Производственные мощности",
       expert: "CRO Specialist",
       expertRole: "Аудитор доказательной базы",
-      image: "assets/school-photos/new/photos/photo_765@30-08-2026_02-03-55.jpg",
+      image: "assets/screenshots/07_solutions_production.png",
       targetUrl: "solutions.html#content",
       description: "Карточки производственной базы: двухголовочные ЧПУ-центры резки, 7-метровая камера полимеризации порошковой окраски в любой цвет RAL, ночная доставка спецтранспортом «пирамида».",
       rationales: [
@@ -173,7 +173,7 @@ window.REVIEW_DATA = {
       badge: "Портфолио / UX",
       expert: "Accessibility Auditor",
       expertRole: "Аудитор доступности и UX",
-      image: "assets/school-photos/new/photos/photo_1080@31-08-2026_16-43-11.jpg",
+      image: "assets/screenshots/08_projects_catalog.png",
       targetUrl: "projects.html",
       description: "Полный интерактивный каталог всех объектов с фильтрами по типам конструкций («Все», «Двери EI-60», «Окна ГОСТ», «Витражи», «МГН и пандусы»). Все карточки имеют монолитную одинаковую высоту `grid-auto-rows: 1fr`.",
       rationales: [
@@ -195,8 +195,8 @@ window.REVIEW_DATA = {
       badge: "Детализация / Фотофиксация",
       expert: "Senior Frontend Engineer",
       expertRole: "Архитектор компонентов",
-      image: "assets/school-photos/new/photos/photo_1064@30-08-2026_02-07-26.jpg",
-      targetUrl: "projects.html?school=batayskiy",
+      image: "assets/screenshots/09_projects_passport.png",
+      targetUrl: "projects.html?school=bataisky",
       description: "Детальное модальное окно объекта с листаемой фотогалереей высокого разрешения, перечнем установленных узлов, точными характеристиками (объем остекления, количество дверей) и плашкой Audit Shield.",
       rationales: [
         "Реализована фокус-ловушка (Focus Trap), блокировка скролла подложки (body scroll lock), навигация стрелками клавиатуры и закрытие по Esc.",
@@ -217,7 +217,7 @@ window.REVIEW_DATA = {
       badge: "Юридическая чистота / Тендеры",
       expert: "Legal Compliance Officer",
       expertRole: "Офицер правового комплаенса",
-      image: "assets/school-photos/new/photos/photo_909@30-08-2026_02-05-16.jpg",
+      image: "assets/screenshots/10_documents_sro.png",
       targetUrl: "documents.html",
       description: "Тендерный пакет документов для службы безопасности и тендерного комитета: Выписка из реестра членов СРО (до 500 млн руб.), Пожарный сертификат EI-60 по ФЗ № 123, Сертификат ГОСТ 23166-2021 на оконные блоки, Экспертное заключение СанПиН.",
       rationales: [
@@ -239,7 +239,7 @@ window.REVIEW_DATA = {
       badge: "Бухгалтерия и договоры",
       expert: "Legal Compliance Officer",
       expertRole: "Юрисконсульт B2B",
-      image: "assets/school-photos/new/photos/photo_765@30-08-2026_02-03-55.jpg",
+      image: "assets/screenshots/11_documents_counterparty.png",
       targetUrl: "documents.html",
       description: "Официальные реквизиты ООО «Константа» с функцией копирования в один клик: ИНН 7725838491, ОГРН 1147746927510, КПП 772501001, Расчетный счет в ПАО «Сбербанк», юридический адрес.",
       rationales: [
@@ -261,7 +261,7 @@ window.REVIEW_DATA = {
       badge: "B2B-коммуникации",
       expert: "CRO & Tech Lead",
       expertRole: "Руководитель проекта",
-      image: "assets/school-photos/new/photos/photo_1080@31-08-2026_16-43-11.jpg",
+      image: "assets/screenshots/12_contacts_direct.png",
       targetUrl: "contacts.html",
       description: "Прямые контакты руководства проектов без автоответчиков: телефон +7 915 015-66-05 (белый контрастный заголовок), WhatsApp, Telegram, email info@konstanta-msk.ru, форма отправки ВОР с исправленным нативным чекбоксом 152-ФЗ.",
       rationales: [
@@ -283,7 +283,7 @@ window.REVIEW_DATA = {
       badge: "Закон и безопасность",
       expert: "Legal Compliance Officer",
       expertRole: "Специалист по 152-ФЗ",
-      image: "assets/school-photos/new/photos/photo_1064@30-08-2026_02-07-26.jpg",
+      image: "assets/screenshots/13_privacy_policy.png",
       targetUrl: "privacy.html",
       description: "Полноценный документ политики обработки персональных данных в редакции от 23 сентября 2026 года, таблица категорий данных, права субъектов и реквизиты оператора персональных данных.",
       rationales: [
